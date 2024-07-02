@@ -102,7 +102,7 @@ body {
 }
 
 /* Small devices (portrait tablets and large phones, 576px to 767px) */
-@media (min-width: 576px) and (max-width: 767px) {
+@media (max-width: 767px) {
   .navbar-brand {
     padding-top: 5px;
     height: auto;
