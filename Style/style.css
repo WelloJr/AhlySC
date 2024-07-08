@@ -11,7 +11,7 @@ body {
 }
 
 #logo-img {
-  background: url('logo.png') no-repeat;
+  background: url('../Pictures/logo.png') no-repeat;
   width: 150px;
   height: 150px;
   margin-right: 15px; /* Adjust margin as needed */
@@ -37,7 +37,7 @@ body {
   display: flex;
   font-family: 'Lora', serif;
   text-shadow: 1px 1px 1px #222;
-  color:#000;
+  color: #000;
   font-size: 1.5em;
   flex-direction: column;
   justify-content: flex-start; /* Align items to the top */
@@ -96,9 +96,171 @@ body {
   margin-top: -30px;
 }
 
+.container .jumbotron {
+  box-shadow: 0 0 50px #3f0c1f;
+  border: 2px solid maroon;
+}
+
+#cups-tile, #players-tile, #fixtures-tile {
+  height: 250px;
+  width: 100%;
+  margin-top: 25px;
+  margin-bottom: 15px;
+  position: relative;
+  border: 2px solid #3f0c1f;
+  overflow: hidden;
+}
+
+#cups-tile:hover, #players-tile:hover, #fixtures-tile:hover {
+  box-shadow: 0 1px 5px 1px #cccccc;
+}
+
+#cups-tile {
+  background: url('../Pictures/cups-logo.png') no-repeat;
+  background-position: center;
+}
+#players-tile {
+  background: url('../Pictures/players-logo.png') no-repeat;
+  background-position: center;
+}
+#fixtures-tile {
+  background: url('../Pictures/fixtures-logo.png') no-repeat;
+  background-position: center;
+}
+
+#cups-tile span, #players-tile span, #fixtures-tile span {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 1.6em;
+  text-transform: uppercase;
+  background-color: #000;
+  color: #fff;
+  opacity: .8;
+}
+
+.category-tile {
+  position: relative;
+  border: 2px solid #3F0C1F;
+  overflow: hidden;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto 15px;
+}
+.category-tile span {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  background-color: #000;
+  color: #fff;
+  opacity: .8;
+}
+.category-tile:hover {
+  box-shadow: 0 1px 5px 1px #cccccc;
+}
+#cups-categories-title + div {
+  margin-bottom: 50px;
+}
+
+.cups-item-title {
+  margin-bottom: 1.5rem;
+}
+
+.cups-item-photo {
+  position: relative;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.cups-item-photo img {
+  width: 100%;
+  height: auto;
+}
+
+.cups-item-years {
+  font-weight: bold;
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+.cup-item-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.cup-item-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.cup-item-details {
+  font-size: 1rem;
+}
+
+@media (max-width: 767px) {
+  .cups-item-photo img {
+    width: 100%;
+  }
+}
+
+.panel-footer {
+  background-color: #333; /* Dark background color */
+  color: #fff; /* Text color */
+  padding: 30px 0; /* Padding top and bottom */
+  text-align: center; /* Center align content */
+}
+
+.panel-footer section {
+  margin-bottom: 20px; /* Spacing between sections */
+  position: relative; /* Relative positioning for child elements */
+}
+
+.panel-footer section:not(:last-child):after {
+  content: '';
+  position: absolute;
+  bottom: -10px; /* Adjust position of the line */
+  left: 0; /* Line starts from the left */
+  width: 100%; /* Line spans the full width of the section */
+  height: 1px; /* Line thickness */
+  background-color: #fff; /* Line color */
+}
+
+.panel-footer section span {
+  font-weight: bold; /* Bold text for section titles */
+  color: #f0ad4e; /* Accent color */
+}
+
+.panel-footer section a {
+  color: #fff; /* Link color */
+  text-decoration: none; /* Remove underline */
+  display: block; /* Display links as block elements */
+  margin-top: 5px; /* Spacing between links */
+}
+
+.panel-footer section a:hover {
+  text-decoration: underline; /* Underline links on hover */
+}
+
+
 /* Extra small devices (phones, 576px and down) */
 @media (max-width: 576px) {
-
+  .container .jumbotron {
+    background: url('../Pictures/jumbo-xs.jpg') no-repeat;
+    height: 309px;
+    background-size: cover;
+  }
+  
+  .panel-footer section {
+    margin-bottom: 30px; /* Increase spacing between sections */
+  }
 }
 
 /* Small devices (portrait tablets and large phones, 576px to 767px) */
@@ -124,51 +286,51 @@ body {
     margin-right: 5px;
     vertical-align: middle;
   }
-  .navbar-brand {
-    padding-top: 5px;
-    height: auto;
-    align-items: center;
+  .container .jumbotron {
+    background: url('../Pictures/jumbo-s.jpg') no-repeat;
+    height: 324px;
+    background-size: cover;
   }
-
-  .navbar-brand h1 {
-    font-size: 4vw;
-    margin: 0;
-  }
-
-  .navbar-brand p {
-    font-size: 0.7em;
-    margin: 5px 0 0;
-  }
-
-  .navbar-brand p img {
-    height: 18px;
-    margin-right: 5px;
-    vertical-align: middle;
+  .cups-item-photo img {
+    width: 100%;
   }
 }
 
 /* Medium devices (landscape tablets, 768px to 991px) */
 @media (min-width: 768px) and (max-width: 991px) {
   #logo-img {
-    background: url('logo-small.png');
+    background: url('../Pictures/logo-small.png');
     width: 85px;
     height: 85px;
     margin: 5px 5px 5px 0;
+  }
+  .container .jumbotron {
+    background: url('../Pictures/jumbo-m.jpg') no-repeat;
+    height: 432px;
+    background-size: cover;
   }
 }
 
 /* Large devices (laptops/desktops, 992px to 1199px) */
 @media (min-width: 992px) and (max-width: 1199px) {
   #logo-img {
-    background: url('logo-small.png');
+    background: url('../Pictures/logo-small.png');
     width: 85px;
     height: 85px;
     margin: 5px 5px 5px 0;
+  }
+  .container .jumbotron {
+      background: url('../Pictures/jumbo-l.jpg') no-repeat;
+      height: 558px;
+      background-size: cover;
   }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media (min-width: 1200px) {
-  
+  .container .jumbotron {
+    background: url('../Pictures/jumbo-xl.jpg') no-repeat;
+    height: 675px;
+    background-size: cover;
+  }
 }
-
